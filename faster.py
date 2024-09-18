@@ -2,9 +2,9 @@ import subprocess
 
 def run_cli():
     # Define the command as a string
-    command = "insanely-fast-whisper --hf_token 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 --file-name audio.wav --flash True"
+    command = "insanely-fast-whisper --hf-token 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 --file-name audio.wav --flash True"
 
-    command = "insanely-fast-whisper --hf_token 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 --file-name audio.wav"
+    command = "insanely-fast-whisper --hf-token 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 --file-name audio.wav"
     # Use subprocess to run the command
     process = subprocess.Popen(command, shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
 
