@@ -23,7 +23,7 @@ from pynvml import nvmlInit, nvmlDeviceGetHandleByIndex, nvmlDeviceGetMemoryInfo
 pipe = pipeline("text-generation", model="HuggingFaceH4/zephyr-7b-beta", torch_dtype=torch.float16, device=0)
 #pipe = pipeline("text-generation", model="HuggingFaceH4/zephyr-7b-beta", device="cuda")
 #pipe = pipeline("text-generation", model="HuggingFaceH4/zephyr-7b-beta")
-#transcriber = pipeline("automatic-speech-recognition", model="openai/whisper-base.en")
+transcriber = pipeline("automatic-speech-recognition", model="openai/whisper-base.en")
 
 def clear_gpu_memory():
     torch.cuda.empty_cache()
